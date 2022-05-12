@@ -1,19 +1,21 @@
 <%= form_for @product do |f| %>
 
   <%= f.label :name %>
-  <%= f.text_field :name, placeholder: "Drill hammer" %>%>
-
+  <%= f.text_field :name, placeholder: "Drill hammer" %>
+  <br>
   <%= f.label :category %>
   <%= f.text_field :category, placeholder: "A, B OR C" %>
-
+  <br>
   <%= f.label :code %>
   <%= f.number_field :code, placeholder:"8983" %>
-
+  <br>
   <%= f.label :code_confirmation %>
   <%= f.number_field :code_confirmation, placeholder: "Confirm your code here"%>
-
+  <br>
   <%= f.label :stock %>
   <%= f.number_field :stock, placeholder:"10" %>
-
+  <br>
   <%= f.submit %>
 <% end %>
+
+<h3> <%= link_to "Go back", products_path(@product) %>    </h3>

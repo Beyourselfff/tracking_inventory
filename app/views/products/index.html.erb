@@ -1,6 +1,8 @@
 <h1> Hello! , these are all the products in stock</h1>
 
 <% @products.each do |product| %>
-<h2> <%= link_to product.name , product_path(product) %> <%=product.code%> <%=product.category%> <%= product.stock %> </h2>
+  <h2> <%= link_to product.name , product_path(product) %> </h2>
+  <h3>Stock available:  <%= product.stock %> </h3>
 <% end   %>
- <h3> <%= link_to "Create a new product", new_product_path(@product) %>    </h3>
+<br>
+<h3> <%= link_to "Create a new product", new_product_path(@product) %>    </h3>

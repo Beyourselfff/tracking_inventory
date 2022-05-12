@@ -1,8 +1,16 @@
-<h1> <%= @product.name %> </h1>
-<h1> <%= @product.code %> </h1>
-<h1> <%= @product.category %> </h1>
-<h1> <%= @product.stock %> </h1>
+<p> <u>Name of the product: </u> <%= @product.name %> </p>
+<p> <u>Code of the product: </u> <%= @product.code %> </p>
+<p> <u>Category of product:</u> <%= @product.category %> </p>
+<p> <u>Stock of product: </u> <%= @product.stock %> </p>
+
+<%# <h1> Name of the product: </h1>   <h2> <%= @product.name % > </h2>%>
+<%# <h1>Code of the product:  </h1>   <h2> <%= @product.code % > </h2>%>
+<%# <h1>Category of the product:</h1> <h2> <%= @product.category % ></h2>%>
+<%# <h1>Stock of the product:</h1>   <h2> <%= @product.stock % > </h2>%>
+
 
  <%= link_to "Go to all products", products_path %>
+ <br>
  <%= link_to "Borrar", product_path(@product), method: :delete, data: {confirm: "Are your sure?"}  %>
+ <br>
  <%= link_to "Editar", edit_product_path(@product) %>

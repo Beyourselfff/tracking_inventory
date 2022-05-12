@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   def index
     @products = Product.all
   end
@@ -14,7 +15,6 @@ class ProductsController < ApplicationController
   def create
     @product = Product.create(strong_params)
     redirect_to products_path
-
   end
 
   def edit
