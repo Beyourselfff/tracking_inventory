@@ -3,3 +3,4 @@
 <% @products.each do |product| %>
 <h2> <%= link_to product.name , product_path(product) %> <%=product.code%> <%=product.category%> <%= product.stock %> </h2>
 <% end   %>
+ <h3> <%= link_to "Create a new product", new_product_path(@product) %>    </h3>
