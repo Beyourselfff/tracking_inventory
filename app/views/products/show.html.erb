@@ -4,3 +4,5 @@
 <h1> <%= @product.stock %> </h1>
 
  <%= link_to "Go to all products", products_path %>
+ <%= link_to "Borrar", product_path(@product), method: :delete, data: {confirm: "Are your sure?"}  %>
+ <%= link_to "Editar", edit_product_path(@product) %>
