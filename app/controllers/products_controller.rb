@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create(strong_params)
+    @product = Product.create(product_params)
     redirect_to products_path
   end
 
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product.update(strong_params)
+    @product.update(product_params)
     redirect_to product_path(@product)
   end
 
@@ -32,13 +32,12 @@ class ProductsController < ApplicationController
 
   private
 
-  def strong_params
+  def product_params
     params.require(:product).permit(:name, :code, :stock, :category)
   end
 
   def set_product
     @product = Product.find(params[:id])
   end
-
 
 end
